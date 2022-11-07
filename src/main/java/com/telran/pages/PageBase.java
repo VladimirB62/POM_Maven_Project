@@ -57,7 +57,7 @@ public class PageBase {
     }
 
     public  void takeScreenshot(String pathName) {
-        var tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File(pathName);
         try {
             Files.copy(tmp,screenshot);

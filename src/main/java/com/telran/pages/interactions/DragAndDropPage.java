@@ -22,7 +22,7 @@ public class DragAndDropPage extends PageBase {
         Actions actions = new Actions(driver);
         pause(2000);
         actions.dragAndDrop(draggable,droppable).perform();
-        var textTo = droppable.getText();
+        String textTo = droppable.getText();
         if (textTo.equals("Dropped!")){
             System.out.println("PASS: Source is dropped to target as expected");
         }else{
@@ -35,12 +35,12 @@ public class DragAndDropPage extends PageBase {
     public DragAndDropPage dragAndDropBy() {
         Actions actions = new Actions(driver);
 
-        var xOffSet = draggable.getLocation().getX();
-        var yOffSet = draggable.getLocation().getY();
+        int xOffSet = draggable.getLocation().getX();
+        int yOffSet = draggable.getLocation().getY();
         System.out.println("xOffSet-->" + xOffSet + "yOffSet-->" + yOffSet);
 
-        var xOffSet1 = droppable.getLocation().getX();
-        var yOffSet1 = droppable.getLocation().getY();
+        int xOffSet1 = droppable.getLocation().getX();
+        int yOffSet1 = droppable.getLocation().getY();
         System.out.println("xOffSet-->" + xOffSet + "yOffSet-->" + yOffSet);
 
         pause(2000);
@@ -51,7 +51,7 @@ public class DragAndDropPage extends PageBase {
         pause(1000);
 
         actions.dragAndDropBy(draggable,xOffSet1,yOffSet1).perform();
-        var textTo = droppable.getText();
+        String textTo = droppable.getText();
         if (textTo.equals("Dropped!")){
             System.out.println("PASS: Source is dropped to target as expected");
         }else{

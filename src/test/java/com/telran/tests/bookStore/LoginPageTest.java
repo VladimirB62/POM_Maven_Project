@@ -7,6 +7,7 @@ import com.telran.pages.bookStore.LoginPage;
 import com.telran.pages.bookStore.ProfilePage;
 import com.telran.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends TestBase {
@@ -18,8 +19,9 @@ public class LoginPageTest extends TestBase {
     }
 
     @Test
+    @Parameters({"name","password"})
     public void loginPositivTest(){
-        new LoginPage(driver).login(UserData.USER_NAME, UserData.USER_PASSWORD);
+        new LoginPage(driver).login("name","password");
         new ProfilePage(driver).verifyUserName("arsLeon").logout();
 
     }

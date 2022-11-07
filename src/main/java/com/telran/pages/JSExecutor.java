@@ -43,13 +43,13 @@ public class JSExecutor extends PageBase{
     }
 
     public JSExecutor getTitleWithJSE() {
-        var title = js.executeScript("return document.title;").toString();
+        String title = js.executeScript("return document.title;").toString();
         System.out.println("******************************" + "\n" + title);
         return this;
     }
 
     public JSExecutor getURLPageWithJSE() {
-        var url = js.executeScript("return document.URL;").toString();
+        String url = js.executeScript("return document.URL;").toString();
         System.out.println("********************************" + "\n" + url);
         return this;
     }

@@ -21,7 +21,7 @@ public class ToolTipsPage extends PageBase {
     public ToolTipsPage hoverToolTipWithAttribute() {
         click(toolTipButton);
 
-        var actualToolTip = buttonToolTip.getText();
+        String actualToolTip = buttonToolTip.getText();
         System.out.println("Retrived tooltip as: " + actualToolTip);
         String expectedToolTip = "You hovered over the Button";
         if(actualToolTip.equals(expectedToolTip)){

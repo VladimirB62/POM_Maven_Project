@@ -4,10 +4,9 @@ import com.telran.pages.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.w3c.dom.stylesheets.LinkStyle;
+
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class WindowsPage extends PageBase {
