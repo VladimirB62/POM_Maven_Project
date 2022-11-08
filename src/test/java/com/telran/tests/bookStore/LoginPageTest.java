@@ -18,11 +18,17 @@ public class LoginPageTest extends TestBase {
         new SidePanelPage(driver).clickOnLogin();
     }
 
+    @Test (enabled = false)
+    public void loginPositiveTest(){
+        new LoginPage(driver).login(UserData.USER_NAME, UserData.USER_PASSWORD);
+        new ProfilePage(driver).verifyUserName(UserData.USER_NAME).logout();
+    }
+
+
     @Test
     @Parameters({"name","password"})
-    public void loginPositivTest(){
-        new LoginPage(driver).login("name","password");
+    public void loginPositivTest(String username, String password){
+        new LoginPage(driver).login(username,password);
         new ProfilePage(driver).verifyUserName("arsLeon").logout();
-
     }
 }

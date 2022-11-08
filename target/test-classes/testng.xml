@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="User" verbose="1" >
-    <test name="User" >
+    <test name="Button" >
         <classes>
             <class name="com.telran.tests.elements.ButtonsTests" />
         </classes>

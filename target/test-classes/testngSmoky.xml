@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="User" verbose="1" >
+    <test name="Smoky" >
+        <classes>
+            <class name="com.telran.tests.alertsFrameWindows.AlertsTests" >
+                <methods>
+                    <exclude name=".*Text.*"></exclude>
+                </methods>
+            </class>
+            <class name="com.telran.tests.JSTests" >
+                <methods>
+                    <exclude name=".*Box.*"></exclude>
+                </methods>
+            </class>
+            <class name="com.telran.tests.interactions.DragAndDropTests"></class>
+        </classes>
+    </test>
+</suite>
